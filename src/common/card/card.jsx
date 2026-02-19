@@ -4,14 +4,16 @@ import React from 'react'
 import Image from 'next/image'
 
 function Card( props) {
+    
     return (
         <div className="border rounded-lg shadow-md p-4 hover:shadow-lg transition min-w-60 max-w-60 bg-gray-400">
-            <div className="relative w-full h-48 mb-4">
+            <div className="relative w-full h-48 mb-4 overflow-hidden ">
                 <Image
-                src={props.image}
-                alt={props.title}
-                fill
-                className="object-cover rounded-md"
+                    src={props.image}
+                    alt={props.title}
+                    fill
+                    unoptimized
+                    className="object-contain bg-white rounded-md"
                 />
             </div>
 
