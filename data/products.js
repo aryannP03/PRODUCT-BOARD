@@ -4,6 +4,7 @@ export const products = [
     image: "/products/shoes.jpg",
     title: "Shoes",
     price: 199,
+    category: "Footwear",
     description: "Random description of shoes"
   },
   {
@@ -11,20 +12,23 @@ export const products = [
     image: "/products/shirt.jpg",
     title: "Shirt",
     price: 299,
+    category: "Clothing",
     description: "Random description of shirt"
   },
   {
     id: "p3",
     image: "/products/tshirt.jpg",
-    title: "Tshirt",
+    title: "Tees",
     price: 399,
-    description: "Random description of Tshirt"
+    category: "Clothing",
+    description: "Random description of Tees"
   },
   {
     id: "p4",
     image: "/products/jeans.jpg",
     title: "Jeans",
     price: 499,
+    category: "Clothing",
     description: "Random description of jeans"
   },
   {
@@ -32,6 +36,7 @@ export const products = [
     image: "/products/shoes.jpg",
     title: "Shoes",
     price: 199,
+    category: "Footwear",
     description: "Random description of shoes"
   },
   {
@@ -39,20 +44,23 @@ export const products = [
     image: "/products/shirt.jpg",
     title: "Shirt",
     price: 299,
+    category: "Clothing",
     description: "Random description of shirt"
   },
   {
     id: "p7",
     image: "/products/tshirt.jpg",
-    title: "Tshirt",
+    title: "Tees",
     price: 399,
-    description: "Random description of Tshirt"
+    category: "Clothing",
+    description: "Random description of Tees"
   },
   {
     id: "p8",
     image: "/products/jeans.jpg",
     title: "Jeans",
     price: 499,
+    category: "Clothing",
     description: "Random description of jeans"
   },
   {
@@ -60,6 +68,7 @@ export const products = [
     image: "/products/shoes.jpg",
     title: "Shoes",
     price: 199,
+    category: "Footwear",
     description: "Random description of shoes"
   },
   {
@@ -67,20 +76,23 @@ export const products = [
     image: "/products/shirt.jpg",
     title: "Shirt",
     price: 299,
+    category: "Clothing",
     description: "Random description of shirt"
   },
   {
     id: "p11",
     image: "/products/tshirt.jpg",
-    title: "Tshirt",
+    title: "Tees",
     price: 399,
-    description: "Random description of Tshirt"
+    category: "Clothing",
+    description: "Random description of Tees"
   },
   {
     id: "p12",
     image: "/products/jeans.jpg",
     title: "Jeans",
     price: 499,
+    category: "Clothing",
     description: "Random description of jeans"
   },
   {
@@ -88,6 +100,7 @@ export const products = [
     image: "/products/shoes.jpg",
     title: "Shoes",
     price: 199,
+    category: "Footwear",
     description: "Random description of shoes"
   },
   {
@@ -95,20 +108,31 @@ export const products = [
     image: "/products/shirt.jpg",
     title: "Shirt",
     price: 299,
+    category: "Clothing",
     description: "Random description of shirt"
   },
   {
     id: "p15",
     image: "/products/tshirt.jpg",
-    title: "Tshirt",
+    title: "Tees",
     price: 399,
-    description: "Random description of Tshirt"
+    category: "Clothing",
+    description: "Random description of Tees"
   },
   {
     id: "p16",
     image: "/products/jeans.jpg",
     title: "Jeans",
     price: 499,
+    category: "Clothing",
+    description: "Random description of jeans"
+  },
+  {
+    id: "p17",
+    image: "",
+    title: "Jeans",
+    price: "",
+    category: "Clothing",
     description: "Random description of jeans"
   }
 ];
