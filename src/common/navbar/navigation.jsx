@@ -41,9 +41,9 @@ export default function Navigation() {
           </div>
 
           <nav className="flex flex-col gap-3 text-gray-600">
-            <Link href="/" className="px-3 py-2 rounded-lg hover:bg-gray-100">
+            {/* <Link href="/" className="px-3 py-2 rounded-lg hover:bg-gray-100">
               Home
-            </Link>
+            </Link> */}
             <Link href="/dashboard" className="px-3 py-2 rounded-lg hover:bg-gray-100">
               Dashboard
             </Link>
@@ -60,6 +60,3 @@ export default function Navigation() {
     </>
   )
 }
-
-
-
