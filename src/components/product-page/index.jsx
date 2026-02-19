@@ -7,19 +7,20 @@ const ProductsPage = () => {
 
       <div className="max-w-7xl mx-auto px-6 py-10">
 
-        {/* Header Section */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-800">
+        
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-3">
+            
+            <h1 className="text-3xl mt-3 font-bold text-gray-800 inline-flex self-start">
               Products
             </h1>
-            <p className="text-gray-500 mt-1">
-            </p>
+            <input type="text" placeholder="Search Product"
+              className="bg-blue-200 text-blue-500 rounded h-8 max-w-48 placeholder:text-blue-500 px-2" />
+            
+            
           </div>
 
-        </div>
+        
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
           {products?.map((product) => (
             <Card

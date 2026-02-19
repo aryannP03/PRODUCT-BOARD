@@ -7,9 +7,8 @@ function Card(props) {
   return (
     <div className="w-full bg-white border border-gray-200 rounded-xl 
       shadow-sm hover:shadow-lg hover:-translate-y-1 
-      transition-all duration-300 overflow-hidden">
+      transition-all duration-300 overflow-hidden max-w-65">
 
-      {/* Image Section */}
       <div className="relative w-full h-48 bg-gray-50 flex items-center justify-center">
         <Image
           src={props.image}
@@ -20,7 +19,6 @@ function Card(props) {
         />
       </div>
 
-      {/* Content Section */}
       <div className="p-4">
 
         <h2 className="text-lg font-semibold text-gray-800 mb-1 truncate">
