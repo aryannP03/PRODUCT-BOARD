@@ -2,10 +2,11 @@
 import Card from "@/common/card"
 import useProductSearch from "./hooks/useProductsearch"
 import { Suspense } from "react"
+import Link from "next/link"
 
 const ProductsPage = () => {
 
-  const { filteredProducts, setSearchTerm } = useProductSearch()
+  const { filteredProducts, setSearchTerm, category, setCategory } = useProductSearch()
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -17,19 +18,32 @@ const ProductsPage = () => {
             <h1 className="text-3xl mt-3 font-bold text-gray-800 inline-flex self-start">
               Products
             </h1>
+            <select value={category} onChange={(e) => setCategory(e.target.value)}
+              className="bg-blue-200 text-blue-500 px-4 py-1.5 max-w-48 rounded">
+              <option value="All">All</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Footwear">Footwear</option>
+            </select>
             <input type="text" placeholder="Search Product" onChange={(e) =>setSearchTerm(e.target.value)}
               className="bg-blue-200 text-blue-500 rounded h-8 max-w-48 placeholder:text-blue-500 px-2 mr-2" />
           </div>
       
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8"> 
             {filteredProducts?.map((product) => (
-              <Card
+              <Link
                 key={product.id}
-                image={product.image}
-                title={product.title}
-                price={product.price}
-                description={product.description}
-              />
+                href={`/products/${product.id}`}
+                className="block"
+                >
+                  <Card
+                  key={product.id}
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  description={product.description}
+                  />
+                </Link>
             ))}
         </div>
 
