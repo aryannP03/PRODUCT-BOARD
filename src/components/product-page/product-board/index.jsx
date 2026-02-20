@@ -17,16 +17,18 @@ const ProductsBoard = ( {products} ) => {
             <h1 className="text-3xl mt-3 font-bold text-gray-800 inline-flex self-start">
               Products
             </h1>
-            <select value={category} onChange={(e) => setCategory(e.target.value)}
-              className="bg-blue-200 text-blue-500 px-4 py-1.5 max-w-48 rounded">
-              <option value="All">All</option>
-              <option value="beauty">Beauty</option>
-              <option value="furniture">Furniture</option>
-              <option value="Footwear">Footwear</option>
-              <option value="fragrances">Fragrances</option>
-            </select>
-            <input type="text" placeholder="Search Product" onChange={(e) =>setSearchTerm(e.target.value)}
-              className="bg-blue-200 text-blue-500 rounded h-8 max-w-48 placeholder:text-blue-500 px-2 mr-2" />
+            <div>  
+              <select value={category} onChange={(e) => setCategory(e.target.value)}
+                className="bg-blue-200 text-blue-500 px-4 py-1.5 max-w-48 rounded mr-2">
+                <option value="All">All</option>
+                <option value="beauty">Beauty</option>
+                <option value="furniture">Furniture</option>
+                <option value="Footwear">Footwear</option>
+                <option value="fragrances">Fragrances</option>
+              </select>
+              <input type="text" placeholder="Search Product" onChange={(e) =>setSearchTerm(e.target.value)}
+                className="bg-blue-200 text-blue-500 rounded h-8 max-w-48 placeholder:text-blue-500 px-2 mr-2 mt-2" />
+          </div>
           </div>
       
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8"> 
