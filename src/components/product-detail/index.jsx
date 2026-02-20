@@ -18,7 +18,7 @@ export default async function ProductDetailPage({ params }) {
 
         <div className="flex items-center justify-center aspect-square">
           <Image
-            src={product.thumbnail}
+            src={product?.thumbnail}
             width={400}
             height={400}
             alt={product.title}
