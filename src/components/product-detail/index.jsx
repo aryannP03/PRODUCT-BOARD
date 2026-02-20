@@ -1,12 +1,12 @@
-import {products}  from '../../../data/products'
+import { getProductById } from '@/utils/productService'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 
 export default async function ProductDetailPage({ params }) {
 
     const { id } = await params
-  const product = products.find(p => p.id === id)
-  // console.log(product);
+  const product = await getProductById(id)
+  console.log(product);
   if (!product) {
     notFound()
   }
@@ -18,12 +18,10 @@ export default async function ProductDetailPage({ params }) {
 
         <div className="flex items-center justify-center aspect-square">
           <Image
-            src={product.image}
+            src={product.thumbnail}
             width={400}
             height={400}
             alt={product.title}
-            unoptimized
-            priority
             className="rounded-xl object-cover"
           />
         </div>

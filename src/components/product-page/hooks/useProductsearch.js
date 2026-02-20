@@ -1,24 +1,26 @@
 'use client'
-import { useState } from "react";
-import { products } from "../../../../data/products";
- 
- function useProductSearch() {
-    const [searchTerm, setSearchTerm] = useState("")
-    const [category, setCategory] = useState("All")
+import { useState, useMemo } from "react"
 
-    const filteredProducts = products.filter((product) => {
-        const search = product.title.toLowerCase().includes(searchTerm.toLowerCase())
-        console.log("Prod cat is :", product.category);
-        
-        const filtercategory = category === "All" || product.category === category
+function useProductSearch(products = []) {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [category, setCategory] = useState("All")
 
-        return filtercategory && search
-    }
-    ) 
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => {
+      const Search = product.title.toLowerCase().includes(searchTerm.toLowerCase())
 
-    
-    return { filteredProducts, setSearchTerm, setCategory, category }
- }
- 
- export default useProductSearch
- 
+      const selectCategory = category === "All" || product.category.toLowerCase() === category.toLowerCase()
+
+      return selectCategory && Search
+    })
+  }, [products, searchTerm, category])
+
+  return {
+    filteredProducts,
+    setSearchTerm,
+    setCategory,
+    category
+  }
+}
+
+export default useProductSearch
