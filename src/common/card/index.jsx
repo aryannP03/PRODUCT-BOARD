@@ -5,7 +5,7 @@ import Image from "next/image"
 
 function Card({ image, title, description, price }) {
   return (
-    <div className="w-full bg-[#18181f] border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)]">
+    <div className="w-full bg-zinc-950 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)]">
 
       {/* Image Section */}
       <div className="relative w-full h-48 bg-[#111115] flex items-center justify-center">
