@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export function middleware(request) {
-  console.log("------------------------------Middle ware invoked------------------------------------");
+  // console.log("------------------------------Middle ware invoked------------------------------------");
   
     const authCookie = request.cookies.get('custom-token')?.value
   const { pathname } = request.nextUrl
