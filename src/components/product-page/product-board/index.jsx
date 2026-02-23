@@ -2,6 +2,7 @@
 import Card from "@/common/card"
 import useProductSearch from "../hooks/useProductsearch"
 import Link from "next/link"
+import CategorySelect from "@/components/filter-categories"
 
 const ProductsBoard = ({ products }) => {
 
@@ -11,17 +12,13 @@ const ProductsBoard = ({ products }) => {
   return (
     <div className="flex-1 text-white min-h-screen">
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 md:py-16">
 
         <div className="mb-12 p-6 md:p-8 rounded-2xl bg-zinc-950 border border-white/10">
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-purple-400 bg-clip-text tracking-tight">
+          <h1 className="text-2xl md:text-4xl font-extrabold text-purple-400 bg-clip-text tracking-tight">
             Products
           </h1>
-
-          <p className="text-gray-400 mt-3 text-base md:text-lg">
-            Browse and explore available products
-          </p>
 
         </div>
 
@@ -35,18 +32,7 @@ const ProductsBoard = ({ products }) => {
               className="w-full bg-[#1c1c22] border border-white/10 text-white px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/40"
             />
           </div>
-
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="bg-[#1c1c22] border border-white/10 text-white px-5 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500/40"
-          >
-            <option value="All">All Categories</option>
-            <option value="beauty">Beauty</option>
-            <option value="furniture">Furniture</option>
-            <option value="footwear">Footwear</option>
-            <option value="fragrances">Fragrances</option>
-          </select>
+          <CategorySelect category={category} setCategory={setCategory} />
 
         </div>
 
@@ -84,5 +70,4 @@ const ProductsBoard = ({ products }) => {
     </div>
   )
 }
-
 export default ProductsBoard
