@@ -1,8 +1,8 @@
 "use client"
-
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { User } from 'lucide-react';
 
 export default function ProfileDropdown() {
   const [open, setOpen] = useState(false)
@@ -34,7 +34,7 @@ export default function ProfileDropdown() {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-2 text-gray-700 hover:text-purple-600 transition"
       >
-        👤
+        <User />
       </button>
 
       {/* Dropdown */}

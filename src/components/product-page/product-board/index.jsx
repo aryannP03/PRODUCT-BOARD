@@ -4,6 +4,7 @@ import useProductSearch from "../hooks/useProductsearch"
 import Link from "next/link"
 import CategoryStrip from "@/components/categories-strip"
 import HeroBanner from "@/components/hero-banner"
+import SortDropdown from "@/common/sort-dropdown"
 
 const ProductsBoard = ({ products }) => {
 
@@ -48,22 +49,12 @@ const ProductsBoard = ({ products }) => {
               {filteredProducts.length} Products Found
             </p> */}
             </div>
-
-            {/* Sort */}
-            <select
-              className="w-full md:w-auto bg-gray-50 border border-gray-200 text-gray-700 px-4 py-2.5 rounded-lg focus:ring-1 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
-            >
-              <option>Sort By</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>Top Rated</option>
-            </select>
+            <SortDropdown />
 
           </div>
 
         </div>
 
-        {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
 
           {filteredProducts.length === 0 ? (

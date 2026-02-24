@@ -13,7 +13,7 @@ export default function StoreLayout({ children }) {
             alt="Product Board Logo"
             width={200}
             height={60}
-            className="h-12 w-auto scale-154"
+            className="h-12 w-auto scale-149"
             priority
           />
 
