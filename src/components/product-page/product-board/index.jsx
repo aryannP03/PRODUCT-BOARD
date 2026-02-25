@@ -5,6 +5,7 @@ import Link from "next/link"
 import CategoryStrip from "@/components/categories-strip"
 import HeroBanner from "@/components/hero-banner"
 import SortDropdown from "@/common/sort-dropdown"
+import FeaturedCarousel from "@/components/products-carousel"
 
 const ProductsBoard = ({ products }) => {
 
@@ -15,6 +16,7 @@ const ProductsBoard = ({ products }) => {
     <div className="min-h-screen">
 
       <HeroBanner />
+      <FeaturedCarousel products={products} />
       
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
